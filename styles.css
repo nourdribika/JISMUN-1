@@ -17,6 +17,13 @@
     font-size: 20px;
 }
 
+.PressableTitle{
+    color: #00397a;
+    margin: 0;
+    font-size: 30px;
+    background-color: #00000070;
+}
+
   /* General Styles */
 body {
     font-family:Arial, sans-serif;
@@ -114,6 +121,10 @@ section {
 
 .cta a:hover {
     background-color: #d6cb00;
+}
+
+p{
+    font-size: large;
 }
 
 /* Footer */
