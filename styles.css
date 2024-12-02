@@ -1,0 +1,122 @@
+
+.Logo {
+    display: inline-block;
+    vertical-align:20%;
+  }
+
+.timer{
+    text-align: center;
+    padding: 10px ;
+    margin-top: 50px;
+    font-size: 60px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.contacts{
+    font-size: 20px;
+}
+
+  /* General Styles */
+body {
+    font-family:Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c0202;
+    background-image: url("menubackground_blured.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color: #000000;
+    margin: 0;
+    font-size: 50px;
+}
+
+h2{
+    color: #000000;
+    margin: 0;
+    font-size: 30px;
+}
+
+ul{
+    color: #000000;
+    font-size: 24px;
+}
+
+img{
+    width:64px;
+    height:64px;
+    filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #691100;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #b30000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta a {
+    background-color: #9c901f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta a:hover {
+    background-color: #d6cb00;
+}
+
+/* Footer */
+footer {
+    background-color: #2a0404;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px ;
+    margin-top: 50px;
+}
