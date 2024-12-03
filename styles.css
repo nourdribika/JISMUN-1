@@ -1,7 +1,13 @@
 
-.Logo {
+.LogoPosition {
     display: inline-block;
     vertical-align:20%;
+}
+
+.icon{
+    width:64px;
+    height:64px;
+    filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10);
 }
 
 .timer{
@@ -22,6 +28,30 @@
     margin: 0;
     font-size: 30px;
     background-color: #00000070;
+    transition: 0.3s;
+}
+
+.PressableTitle:hover{
+    background-color: #58585870;
+}
+
+
+.image{
+    border-width: 12px;
+    border-style:solid;
+    border-radius: 12px;
+    border-color: #330000;
+}
+
+@media only screen and (max-width:600px){
+.image{
+    border-width: 12px;
+    border-style:solid;
+    border-radius: 12px;
+    border-color: #330000;
+    width: 256px;
+    height: 256px;
+}
 }
 
   /* General Styles */
@@ -54,12 +84,6 @@ ul{
     font-size: 24px;
 }
 
-img{
-    width:64px;
-    height:64px;
-    filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10);
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -72,8 +96,6 @@ header {
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    /* position: sticky; */
-    /* top: 0; */
 }
 
 /* Navigation */
@@ -81,16 +103,27 @@ nav {
     background-color: #510000;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    border: none;
+    
 }
 
-nav a {
+.btn-group .button{
+    background-color: #510000;
+    display: flex;
+    justify-content: center;
+    padding: 15px 32px;
+    border: none;
+
     color: white;
-    margin: 0 15px;
+    transition: 0.3s;
+    text-align: center;
+
+    float: left;
 }
 
-nav a:hover {
-    background-color: #828282;
+.btn-group .button:hover{
+    background-color: #330000;
+    border-radius: 20px;
 }
 
 
@@ -105,7 +138,6 @@ section {
     margin-bottom: 40px;
 }
 
-/* Call-to-Action */
 .cta {
     text-align: center;
     margin-top: 20px;
@@ -117,6 +149,7 @@ section {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .cta a:hover {
@@ -129,7 +162,7 @@ p{
 
 /* Footer */
 footer {
-    background-color: #2a0404;
+    background-color: #691100;
     color: #ffffff;
     text-align: center;
     padding-top: 10px ;
@@ -137,6 +170,4 @@ footer {
     margin-top: 50px;  
     width: 100%;
     height: 30px;
-    position: fixed;
-    bottom: 0%;
 }
