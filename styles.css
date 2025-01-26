@@ -35,8 +35,8 @@
     background-color: #58585870;
 }
 
-
 .image{
+    transition: 0.3s;
     border-width: 12px;
     border-style:solid;
     border-radius: 12px;
@@ -45,26 +45,31 @@
 
 @media only screen and (max-width:600px){
 .image{
-    border-width: 12px;
-    border-style:solid;
-    border-radius: 12px;
-    border-color: #330000;
     width: 256px;
     height: 256px;
 }
+
+}
+
+body{
+    margin: 0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
   /* General Styles */
-body {
+body:before {
     font-family:Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #1c0202;
-    background-image: url("menubackground_blured.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background: url("menubackground.jpg") no-repeat center;
+    background-size: 100%;
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    /* filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10); */
+    filter:blur(12px) grayscale(1);
+
 }
 
 h1{
@@ -77,6 +82,12 @@ h2{
     color: #000000;
     margin: 0;
     font-size: 30px;
+}
+
+h4{
+    color: #ffffff;
+    margin: 0;
+    font-size: 20px;
 }
 
 ul{
@@ -117,6 +128,7 @@ nav {
     color: white;
     transition: 0.3s;
     text-align: center;
+    font-size: 18px;
 
     float: left;
 }
@@ -126,6 +138,20 @@ nav {
     border-radius: 20px;
 }
 
+@media only screen and (max-width:650px){
+    .btn-group .button{
+        font-size: 12px;
+    }
+}
+
+form{
+    background-color: #510000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width:100% ;
+    border-radius: 25px;
+}
 
 /* Main Content */
 main {
@@ -148,7 +174,7 @@ section {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
     transition: 0.3s;
 }
 
@@ -170,6 +196,39 @@ footer {
     margin-top: 50px;  
     width: 100%;
     height: 30px;
-    position: sticky;
-    bottom: 0%;
+    /* position: sticky;
+    bottom: 0%; */
+}
+
+.cards{
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 12px;
+    border: #9c901f;
+    background-color: #330000;
+    border-style:solid;
+    border-width: 6px;
+
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.351);
+    background-color: #4b0707;
+}
+
+.container {
+    padding: 2px 16px;
+    
 }
