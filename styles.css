@@ -48,7 +48,6 @@
     width: 256px;
     height: 256px;
 }
-
 }
 
 body{
@@ -66,7 +65,7 @@ body:before {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: -1;
+    z-index: -2;
     /* filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10); */
     filter:blur(12px) grayscale(1);
 
@@ -155,13 +154,14 @@ form{
 
 /* Main Content */
 main {
-    padding: 20px;
-    max-width: 1200px;
+    /* padding: 20px; */
+    max-width: 100%;
     margin: auto;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .cta {
@@ -202,7 +202,7 @@ footer {
 
 .cards{
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     grid-auto-rows: auto;
@@ -220,15 +220,78 @@ footer {
     border-style:solid;
     border-width: 6px;
 
-    
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.351);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.478);
     background-color: #4b0707;
 }
 
 .container {
     padding: 2px 16px;
     
+}
+
+/* Background animation container */
+.background-container {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+/* Container for both logos */
+.img-container {
+    position: absolute;
+    top: 0;
+    width: 40%; /* Adjust size of logos */
+    height: 100%;
+    opacity: 1; /* Initially hidden */
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* The actual animation */
+.animate-into-view-left {
+    visibility: visible; /* Make visible once animated */
+    animation: closeInRotateLeft 5s forwards; /* Apply the animation */
+}
+
+.animate-into-view-right {
+    visibility: visible; /* Make visible once animated */
+    animation: closeInRotateRight 5s forwards; /* Apply the animation */
+}
+
+
+@media only screen and (max-width:600px){
+    .animate-into-view-right{
+        visibility: hidden;
+    }
+}
+
+/* Individual rotation and movement for the left logo */
+@keyframes closeInRotateLeft {
+    0% {
+        left: -100%;
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        left: -5%; /* Final resting position */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Individual rotation and movement for the right logo */
+@keyframes closeInRotateRight {
+    0% {
+        right: -100%;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        right: -5%; /* Final resting position */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
