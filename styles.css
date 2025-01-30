@@ -157,6 +157,7 @@ main {
     /* padding: 20px; */
     max-width: 100%;
     margin: auto;
+    text-align: center;
 }
 
 section {
@@ -261,6 +262,12 @@ footer {
     animation: closeInRotateRight 5s forwards; /* Apply the animation */
 }
 
+
+/* @media only screen and (max-width:600px){
+    .animate-into-view-left{
+        width: ;
+    }
+} */
 
 @media only screen and (max-width:600px){
     .animate-into-view-right{
