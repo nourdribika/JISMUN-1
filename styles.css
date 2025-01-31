@@ -16,11 +16,11 @@ body:before {
 }
 
 h1 {
-    color: #3C0008; /* Changed text color to #3C0008 */
+    color: #3C0008;
     margin: 0;
     font-size: 60px;
     position: relative;
-    z-index: 1; /* Ensures title is in front of the image */
+    z-index: 1;
 }
 
 h2 {
@@ -30,19 +30,19 @@ h2 {
 }
 
 h4 {
-    color: #3C0008; /* Changed text color to #3C0008 */
+    color: #3C0008;
     margin: 0;
     font-size: 24px;
 }
 
 ul {
-    color: #3C0008; /* Changed text color to #3C0008 */
+    color: #3C0008;
     font-size: 28px;
 }
 
 p {
     font-size: 28px;
-    color: #3C0008; /* Changed text color to #3C0008 */
+    color: #3C0008;
 }
 
 nav {
@@ -69,6 +69,12 @@ nav {
     border-radius: 20px;
 }
 
+@media only screen and (max-width: 650px) {
+    .btn-group .button {
+        font-size: 14px;
+    }
+}
+
 section h2, section p {
     color: #3C0008;
 }
@@ -92,7 +98,7 @@ section .cta a:hover {
     border-style: solid;
     border-radius: 12px;
     border-color: #9d9596;
-    z-index: -1; /* Ensures image stays behind the title */
+    z-index: -1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -126,10 +132,10 @@ footer {
     background-color: #691100;
     color: #9d9596;
     text-align: center;
-    padding-top: 5px; /* Reduced padding */
+    padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 50px;
     width: 100%;
-    height: 20px; /* Reduced footer size */
-    font-size: 14px; /* Reduced font size */
+    height: 20px;
+    font-size: 14px;
 }
