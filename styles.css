@@ -1,10 +1,63 @@
-body {
-    margin: 0 auto;
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
+ .LogoPosition {
+    display: inline-block;
+    vertical-align:20%;
 }
 
+.icon{
+    width:64px;
+    height:64px;
+    filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10);
+}
+
+.timer{
+    text-align: center;
+    padding: 10px ;
+    margin-top: 50px;
+    font-size: 60px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.contacts{
+    font-size: 20px;
+}
+
+.PressableTitle{
+    color: #00397a;
+    margin: 0;
+    font-size: 30px;
+    background-color: #00000070;
+    transition: 0.3s;
+}
+
+.PressableTitle:hover{
+    background-color: #58585870;
+}
+
+.image{
+    transition: 0.3s;
+    border-width: 12px;
+    border-style:solid;
+    border-radius: 12px;
+    border-color: #330000;
+}
+
+@media only screen and (max-width:600px){
+.image{
+    width: 256px;
+    height: 256px;
+}
+}
+
+body{
+    margin: 0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+  /* General Styles */
 body:before {
+    font-family:Arial, sans-serif;
+    background-color: #1c0202;
     background: url("menubackground.jpg") no-repeat center;
     background-size: 100%;
     content: "";
@@ -12,65 +65,111 @@ body:before {
     width: 100vw;
     position: fixed;
     z-index: -2;
-    filter: blur(6px) grayscale(1);
+    /* filter:hue-rotate(35deg) contrast(100%) saturate(1) brightness(10); */
+    filter:blur(12px) grayscale(1);
+
 }
 
-h1 {
+h1{
     color: #000000;
     margin: 0;
-    font-size: 60px;
+    font-size: 50px;
 }
 
-h2 {
+h2{
     color: #000000;
     margin: 0;
-    font-size: 36px;
+    font-size: 30px;
 }
 
-h4 {
+h4{
     color: #ffffff;
     margin: 0;
+    font-size: 20px;
+}
+
+ul{
+    color: #000000;
     font-size: 24px;
 }
 
-ul {
-    color: #000000;
-    font-size: 28px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-p {
-    font-size: 28px;
+/* Header */
+header {
+    background-color: #691100;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
 }
 
+/* Navigation */
 nav {
-    background-color: #3C0008;
+    background-color: #510000;
     display: flex;
     justify-content: center;
     border: none;
+    
 }
 
-.btn-group .button {
-    background-color: #3C0008;
+.btn-group .button{
+    background-color: #510000;
     display: flex;
     justify-content: center;
     padding: 15px 32px;
     border: none;
-    color: #9d9596;
+
+    color: white;
     transition: 0.3s;
     text-align: center;
     font-size: 18px;
+
+    float: left;
 }
 
-.btn-group .button:hover {
+.btn-group .button:hover{
     background-color: #330000;
     border-radius: 20px;
 }
 
-section h2, section p {
-    color: #3C0008;
+@media only screen and (max-width:650px){
+    .btn-group .button{
+        font-size: 12px;
+    }
 }
 
-section .cta a {
+form{
+    background-color: #510000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width:100% ;
+    border-radius: 25px;
+}
+
+/* Main Content */
+main {
+    /* padding: 20px; */
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta a {
     background-color: #9c901f;
     color: white;
     padding: 10px 20px;
@@ -79,52 +178,126 @@ section .cta a {
     transition: 0.3s;
 }
 
-section .cta a:hover {
+.cta a:hover {
     background-color: #d6cb00;
 }
 
-.image {
-    transition: 0.3s;
-    border-width: 12px;
-    border-style: solid;
-    border-radius: 12px;
-    border-color: #9d9596;
+p{
+    font-size: 24px;
 }
 
-@media only screen and (max-width: 600px) {
-    .image {
-        width: 256px;
-        height: 256px;
-    }
-}
-
-.cta {
+/* Footer */
+footer {
+    background-color: #691100;
+    color: #ffffff;
     text-align: center;
-    margin-top: 20px;
-    font-size: 32px;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    margin-top: 50px;  
+    width: 100%;
+    height: 30px;
+    /* position: sticky;
+    bottom: 0%; */
 }
 
-.card .container {
-    color: #9d9596;
-}
-
-.cards {
+.cards{
     margin: 0 auto;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     grid-auto-rows: auto;
     gap: 20px;
     padding-top: 30px;
 }
 
-footer {
-    background-color: #691100;
-    color: #9d9596;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 50px;
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
     width: 100%;
-    height: 30px;
+    border-radius: 12px;
+    border: #9c901f;
+    background-color: #330000;
+    border-style:solid;
+    border-width: 6px;
+
 }
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.478);
+    background-color: #4b0707;
+}
+
+.container {
+    padding: 2px 16px;
+    
+}
+
+/* Background animation container */
+.background-container {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+/* Container for both logos */
+.img-container {
+    position: absolute;
+    top: 0;
+    width: 40%; /* Adjust size of logos */
+    height: 100%;
+    opacity: 1; /* Initially hidden */
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* The actual animation */
+.animate-into-view-left {
+    visibility: visible; /* Make visible once animated */
+    animation: closeInRotateLeft 5s forwards; /* Apply the animation */
+}
+
+.animate-into-view-right {
+    visibility: visible; /* Make visible once animated */
+    animation: closeInRotateRight 5s forwards; /* Apply the animation */
+}
+
+
+/* @media only screen and (max-width:600px){
+    .animate-into-view-left{
+        width: ;
+    }
+} */
+
+@media only screen and (max-width:600px){
+    .animate-into-view-right{
+        visibility: hidden;
+    }
+}
+
+/* Individual rotation and movement for the left logo */
+@keyframes closeInRotateLeft {
+    0% {
+        left: -100%;
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        left: -5%; /* Final resting position */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Individual rotation and movement for the right logo */
+@keyframes closeInRotateRight {
+    0% {
+        right: -100%;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    100% {
+        right: -5%; /* Final resting position */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}     
